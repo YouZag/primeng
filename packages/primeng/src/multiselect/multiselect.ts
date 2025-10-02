@@ -1311,7 +1311,7 @@ export class MultiSelect extends BaseEditableHolder implements OnInit, AfterView
     }
 
     searchFields() {
-        return (this.filterBy || this.optionLabel || 'label').split(',');
+        return this.filterFields || (this.filterBy || this.optionLabel || 'label').split(',');
     }
 
     findNearestSelectedOptionIndex(index, firstCheckUp = false) {
